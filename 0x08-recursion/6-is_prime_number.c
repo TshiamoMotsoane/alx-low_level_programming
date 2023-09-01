@@ -3,7 +3,7 @@
 int is_prime_number_helper(int n, int i);
 
 /**
- * _prime_number - prints a prime number
+ * is_prime_number - prints a prime number
  * @n: the number to be checked
  * Return: 1 if the input is a prime number, otherwise return 0.
  */
@@ -19,7 +19,7 @@ int is_prime_number(int n)
 }
 
 /**
- * _prime_number_helper - calculates if num is prime recursively
+ * is_prime_number_helper - calculates if num is prime recursively
  * @n: number to be checked
  * @i: iterator
  * Return: 1 if the input is a prime number, otherwise return 0.
