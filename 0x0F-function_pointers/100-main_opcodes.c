@@ -5,13 +5,13 @@
  * main - prints its own opcodes
  * @argc: number of arguments
  * @argv: array of arguments
- *
  * Return: Always 0 (Success)
  */
+
 int main(int argc, char *argv[])
 {
 	int bytes, i;
-	char *arr;
+	char *p;
 
 	if (argc != 2)
 	{
@@ -27,16 +27,22 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	arr = (char *)main;
+	p = (char *)main;
 
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
 		{
-			printf("%02hhx\n", arr[i]);
+			printf("%02hhx\n", p[i]);
 			break;
 		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx", p[i]);
+		if (i < bytes - 1)
+			printf(" ");
+
+		else
+			printf("\n");
 	}
+
 	return (0);
 }
