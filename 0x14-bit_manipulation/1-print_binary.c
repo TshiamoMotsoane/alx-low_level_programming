@@ -18,16 +18,22 @@ void print_binary(unsigned long int n)
 		_putchar("0");
 		return;
 	}
+		_putchar('0');
+		return;
+	}
+
 	for (mask = 1UL << ((sizeof(n) * 8) - 1); mask > 0; mask >>= 1)
 	{
 		if ((n & mask) == mask)
 		{
 			_putchar("1");
+			_putchar('1');
 			flag = 1;
 		}
 		else if (flag)
 		{
 			_putchar("0");
+			_putchar('0');
 		}
 	}
 }
