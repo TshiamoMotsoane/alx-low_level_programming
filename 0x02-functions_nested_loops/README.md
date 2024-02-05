@@ -1,1 +1,0 @@
-Funtions,nested loops
